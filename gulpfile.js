@@ -1,43 +1,48 @@
-var gulp = require('gulp');
+const fs = require('fs');
+const path = require('path');
+const gulp = require('gulp');
+const eslint = require('gulp-eslint');
+const shell = require('gulp-shell');
+const yaml = require('js-yaml');
 
-gulp.task('copy', function() {
+gulp.task('lint', () => gulp.src([
+  './source/js/**/*.js',
+  './scripts/**/*.js'
+]).pipe(eslint())
+  .pipe(eslint.format()));
 
-  // Start Bootstrap Clean Blog SCSS
-  gulp.src(['node_modules/startbootstrap-clean-blog/scss/**/*'])
-    .pipe(gulp.dest('assets/vendor/startbootstrap-clean-blog/scss'))
+gulp.task('lint:stylus', shell.task([
+  'npx stylint ./source/css/'
+]));
 
-  // Start Bootstrap Clean Blog JS
-  gulp.src([
-      'node_modules/startbootstrap-clean-blog/js/clean-blog.min.js',
-      'node_modules/startbootstrap-clean-blog/js/jqBootstrapValidation.js'
-    ])
-    .pipe(gulp.dest('assets/vendor/startbootstrap-clean-blog/js'))
+gulp.task('validate:config', cb => {
+  const themeConfig = fs.readFileSync(path.join(__dirname, '_config.yml'));
 
-  // Bootstrap
-  gulp.src([
-      'node_modules/bootstrap/dist/**/*',
-      '!**/npm.js',
-      '!**/bootstrap-theme.*',
-      '!**/*.map'
-    ])
-    .pipe(gulp.dest('assets/vendor/bootstrap'))
+  try {
+    yaml.safeLoad(themeConfig);
+    return cb();
+  } catch (error) {
+    return cb(new Error(error));
+  }
+});
 
-  // jQuery
-  gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/jquery/dist/jquery.min.js'])
-    .pipe(gulp.dest('assets/vendor/jquery'))
+gulp.task('validate:languages', cb => {
+  const languagesPath = path.join(__dirname, 'languages');
+  const languages = fs.readdirSync(languagesPath);
+  const errors = [];
 
-  // Font Awesome
-  gulp.src([
-      'node_modules/font-awesome/**',
-      '!node_modules/font-awesome/**/*.map',
-      '!node_modules/font-awesome/.npmignore',
-      '!node_modules/font-awesome/*.txt',
-      '!node_modules/font-awesome/*.md',
-      '!node_modules/font-awesome/*.json'
-    ])
-    .pipe(gulp.dest('assets/vendor/font-awesome'))
+  languages.forEach(lang => {
+    const languagePath = path.join(languagesPath, lang);
+    try {
+      yaml.safeLoad(fs.readFileSync(languagePath), {
+        filename: path.relative(__dirname, languagePath)
+      });
+    } catch (error) {
+      errors.push(error);
+    }
+  });
 
-})
+  return errors.length === 0 ? cb() : cb(errors);
+});
 
-// Default task
-gulp.task('default', ['copy']);
+gulp.task('default', gulp.series('lint', 'validate:config', 'validate:languages'));
