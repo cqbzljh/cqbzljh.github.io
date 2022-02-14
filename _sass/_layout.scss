@@ -1,76 +1,77 @@
-.menu-sm {
-  position: fixed;
-  bottom: 0;
-  left: -$theme-menu-width-sm;
-  width: $theme-menu-width-sm;
-  max-height: 100%;
+// Layout
+//
+// Styles for managing the structural hierarchy of the site.
 
-  &.shift {
-    left: 0;
+.container {
+  padding: 0;
+  margin: 0;
+}
+
+.home-header {
+  margin-top: -1em;
+  margin-bottom: var(--spacer-3);
+}
+
+.content {
+  padding-top: var(--spacer-2);
+  padding-left: var(--spacer-2);
+  padding-right: var(--spacer-2);
+  margin-left:  auto;
+  margin-right: auto;
+  min-height: 100vh;
+}
+
+.sidebar-left {
+  display: flex;
+  padding: var(--spacer);
+  background: center / cover;
+  height: 100vh;
+}
+
+footer {
+  margin-top: var(--spacer-3);
+  margin-bottom: var(--spacer-3);
+}
+
+@media (min-width: $md-width) {
+  .content {
+    padding-top: var(--spacer-3);
+    padding-left: var(--spacer-3);
+    padding-right: var(--spacer-3);
+    margin-left: 25%;
   }
-}
 
-.sidebar-wrap {
-  top: 0;
-
-  @extend .menu-sm;
-
-  .sidebar > :last-child {
-    margin-bottom: 5em;
-  }
-}
-
-.addons-wrap {
-  @extend .menu-sm;
-}
-
-.content-wrap {
-  &.shift {
+  .sidebar-left {
     position: fixed;
     top: 0;
     bottom: 0;
-    left: $theme-menu-width-sm;
-    min-width: 100%;
+  }
+
+  .home-header {
+    margin-top: -2em;
   }
 }
 
-@include breakpoint(md) {
-  .menu-md {
-    left: 0;
-    width: $theme-menu-width;
-  }
-
-  .sidebar-wrap {
-    @extend .menu-md;
-
-    .sidebar {
-      // 20px for scroll
-      width: $theme-menu-width + 20px;
-
-      .header,
-      .toctree {
-        width: $theme-menu-width;
-      }
-    }
-  }
-
-  .addons-wrap {
-    @extend .menu-md;
-  }
-
-  .content-wrap {
-    margin-left: $theme-menu-width;
-
-    &.shift {
-      position: relative;
-      left: 0;
-      min-width: 0;
-    }
+@media (min-width: $lg-width) {
+  .sidebar-right {
+    display: block;
   }
 }
 
-@include breakpoint(xl) {
-  .content-wrap {
-    max-width: $width-xl - $theme-menu-width;
+@media (max-width: $lg-width) {
+  .sidebar-right {
+    display: none;
+  }
+}
+
+@media (max-width: $md-width) {
+  .content {
+    width: 100%;
+  }
+}
+
+@media (min-width: $md-width) and (max-width: $lg-width) {
+  .content {
+    width: 75%;
   }
 }
