@@ -1,40 +1,27 @@
----
-layout: compress
----
-
 <!DOCTYPE html>
-<html>
-{% include head.html %}
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}">
 
-<body>
-  {% include navbar.html %}
-  {% include showcase.html %}
-  {% include about.html %}
-  {% include contact.html %}
-  <!--Footer begins here-->
-  {% include footer.html %}
-</body>
-<script>
-  window.addEventListener("scroll", function (event) {
-    var scroll = this.scrollY;
-    var item = document.getElementsByClassName('navbar-item');
-    /* console.log(scroll); */
-    if (scroll < 565) {
-      item[1].classList.add('is-active');
-      item[2].classList.remove('is-active');
-      item[3].classList.remove('is-active');
-    }
-    if (scroll > 565 && scroll < 1130) {
-      item[1].classList.remove('is-active');
-      item[2].classList.add('is-active');
-      item[3].classList.remove('is-active');
-    }
-    if (scroll > 1130) {
-      item[1].classList.remove('is-active');
-      item[2].classList.remove('is-active');
-      item[3].classList.add('is-active');
-    }
-  });
-</script>
+  {% include head.html %}
 
+  <body id="page-top">
+
+      {{ content }}
+
+	  {% include footer.html %}
+
+	  <!-- Bootstrap core JavaScript -->
+	  <script src="assets/js/jquery.min.js"></script>
+	  <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+	  <!-- Plugin JavaScript -->
+	  <script src="assets/js/jquery.easing.min.js"></script>
+
+	  <!-- Contact form JavaScript -->
+	  <script src="assets/js/jqBootstrapValidation.js"></script>
+	  <script src="assets/js/contact_me.js"></script>
+
+	  <!-- Custom scripts for this template -->
+	  <script src="assets/js/agency.min.js"></script>
+
+  </body>
 </html>

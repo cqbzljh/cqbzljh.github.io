@@ -1,97 +1,39 @@
-# WhatATheme
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that.
+# This file is *NOT* reloaded automatically when you use 'bundle exec jekyll serve'.
+# If you change this file, please restart the server process.
+
+# Site settings
+# are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+theme: jekyll-agency
+
+url    : "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+
+title      : Your Awesome Website
+email      : your-email@example.com #this is also the email contact forms will go to
+description: "Site description"
+author     : Your Name
+# logo:     #optional, defaults to site title
+  # path: assets\img\clients\creative-market.jpg
+  # height: 60 #height in px, defaults to 52px
+
+locale: "en-US" # See available languages in _data/sitetext.yml
+
+analytics:
+  google: #Google Analytics tracking code here
+
+collections:
+  portfolio:
+
 markdown: kramdown
 
-# URL of the Site
-url: ''
-# Base URL of the Site (i.e., Name of the Repository in which the Site is hosted)
-baseurl: 
-
-# Title of the Site
-title: What A Theme
-# Description of the Site
-description: A customizable Jekyll portfolio theme
-# URL of Image of the Site
-site-image: /WhatATheme/assets/images/meta.jpg
-# Keywords of the Site
-site-keywords: Site, Template, Theme
-# URL for the Image of custom Favicon
-favicon-url: 
-
-# URL of the Image of Custom Hero Image (i.e., the image in the background of the very first section of the Homepage)
-heroimage: https://images.pexels.com/photos/220444/pexels-photo-220444.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-
-# Social Media and Contact
-# If you don't want to use any icon, you can leave them blank.
-email: thedevslot@gmail.com
-facebook_username: thedevslot
-twitter_username: thedevslot
-instagram_username: thedevslot
-linkedin_username: thedevslot
-github_username:  thedevslot
-youtube_channel_id: UCk_93NXYP-U_AOB5GfWlOow
-reddit_username: /
-behance_username: /
-dribbble_username: /
-spotify_username: /
-
-# Google Analytics
-google-analytics: UA-163806439-1
-
-# Disqus
-disqus-shortname: thedevslot
-
-# Name of the Author
-author-name: TheDevsLot
-# URL for the Image of the Author
-author-image: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
-# 60 Words About the Author
-author-about: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget pharetra velit, dapibus bibendum ex. Maecenas vitae laoreet mauris, ac luctus metus. Aliquam luctus velit vel ipsum feugiat, vel venenatis mauris hendrerit. Sed at vulputate sapien, eget vehicula dolor. Aliquam volutpat pulvinar neque sit amet sodales.
-# URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
-author-url: https://github.com/thedevslot
-
-# SASS
-sass:
-  sass_dir: _sass
-  style: compressed
-
-# Build settings
-plugins:
-  - jekyll-admin
-  - jekyll-feed
-
-# Permalink
-permalink: "blog/:title"
-
-# Compress
-compress_html:
-  clippings: all
-
-# Defaults
-defaults:
-  -
-    scope:
-      type: 'posts'
-    values:
-      layout: post
-      post-image: ""
-      description: ""
-      tags:
-        - ""
-  -
-    scope:
-      type: 'pages'
-    values:
-      layout: page
-
-# Exclude
-exclude:
-  - .sass-cache/
-  - .jekyll-cache/
-  - gemfiles/
-  - Gemfile
-  - Gemfile.lock
-  - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+# Uncomment following line to use Formspree form ID based URL instead of email based URL
+# Details: https://help.formspree.io/hc/en-us/articles/360017735154-How-to-prevent-spam
+# formspree_form_path: "f/a_form_id"
