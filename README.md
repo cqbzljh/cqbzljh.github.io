@@ -1,154 +1,53 @@
-<div align="right">
-  Language:
-  🇺🇸
-  <a title="Chinese" href="docs/zh-CN/README.md">🇨🇳</a>
-  <a title="Russian" href="docs/ru/README.md">🇷🇺</a>
-</div>
+# WhatATheme
+**WhatATheme** is a customizable Jekyll Portfolio theme which supports blogging. You can use this theme in order to create an elegant, fully responsive portfolio.
 
-# <div align="center"><a title="NexT website repository" href="https://github.com/theme-next/theme-next.org"><img align="center" width="56" height="56" src="https://raw.githubusercontent.com/theme-next/hexo-theme-next/master/source/images/logo.svg?sanitize=true"></a> e x T</div>
+#### You can checkout the [**Demo Here**](https://thedevslot.github.io/WhatATheme/) :boom:
 
-<p align="center">
-  «NexT» is a high quality elegant <a href="https://hexo.io">Hexo</a> theme. It is crafted from scratch with love.
-<br>
-<br>
-  <a href="https://www.npmjs.com/package/hexo-theme-next"><img src="https://img.shields.io/github/package-json/v/theme-next/hexo-theme-next?style=flat-square"></a>
-  <a href="https://nodejs.org"><img src="https://img.shields.io/badge/node-%3E=10.9.0-green?style=flat-square"></a>
-  <a href="https://hexo.io"><img src="https://img.shields.io/badge/hexo-%3E=4.0.0-blue?style=flat-square&logo=hexo"></a>
-  <a href="https://github.com/theme-next/hexo-theme-next/blob/master/LICENSE.md"><img src="https://img.shields.io/badge/license-%20AGPL-orange?style=flat-square&logo=gnu"></a>
-<br>
-  <a href="https://bestpractices.coreinfrastructure.org/projects/2625"><img src="https://img.shields.io/cii/level/2625?style=flat-square" title="Core Infrastructure Initiative Best Practices"></a>
-  <a href="https://travis-ci.org/theme-next/hexo-theme-next?branch=master"><img src="https://img.shields.io/travis/theme-next/hexo-theme-next/master?style=flat-square&logo=travis%20ci" title="Travis CI [Linux]"></a>
-  <a href="https://app.codacy.com/manual/theme-next/hexo-theme-next/dashboard"><img src="https://img.shields.io/codacy/grade/72f7fe7609c2438a92069f448e5a341a/master?style=flat-square&logo=codacy" title="Project Grade"></a>
-  <img src="https://img.shields.io/snyk/vulnerabilities/github/theme-next/hexo-theme-next?style=flat-square" title="Vulnerabilities">
-<br>
-  <img src="https://user-images.githubusercontent.com/16272760/63487983-da41b080-c4df-11e9-951c-64883a8a5e9b.png">
-</p>
+![WhatATheme](assets/images/meta.jpg)
 
-## Live Preview
+# Features :sparkles:
+* Free and Easy setup
+* No Coding Required
+* Compatible with [Github Pages](https://pages.github.com/)
+* Responsive and Blogging Ready
+* HTML Compressor using [Jekyll Compress HTML](https://jch.penibelst.de/)
+* Minified CSS using SaSS
+* CMS Admin Support using [Jekyll Admin](https://jekyll.github.io/jekyll-admin/)
+* Supports Latest [Jekyll 4.x](https://jekyllrb.com/) and [Bundler](https://bundler.io/)
+* Stylesheet built using SaSS
+* Comments using Disqus
+* Analytics using Google Analytics
+* Instant Search using [Simple Jekyll Search](https://github.com/christian-fei/Simple-Jekyll-Search/)
 
-<p align="center">
-  💟 <a href="https://muse.theme-next.org">Muse</a> | 🔯 <a href="https://mist.theme-next.org">Mist</a> | ♓️ <a href="https://pisces.theme-next.org">Pisces</a> | ♊️ <a href="https://theme-next.org">Gemini</a>
-<br>
-<br>
-  More «NexT» examples <a href="https://github.com/theme-next/awesome-next#live-preview">here</a>.
-</p>
+# Installation :books:
+### System Requirements
+* [Ruby](https://www.ruby-lang.org/en/)
+* [Jekyll](https://jekyllrb.com/)
+> You can read **What is Jekyll** [**here**](https://thedevslot.github.io/WhatATheme/blog/what-is-jekyll-how-to-use-it)
+### Up and Running
+* Fork the [Repository](https://github.com/thedevslot/WhatATheme/)
+* Clone or download the repository into directory of your choice: `git clone https://github.com/thedevslot/WhatATheme.git`
+* Inside the directory run `bundle install`
+* Host WhatATheme locally by running `bundle exec jekyll s`
 
-## Installation
+> You can read **How to Install and use WhatATheme?** [**here**](https://thedevslot.github.io/WhatATheme/blog/how-to-install-whatatheme)
 
-The simplest way to install is to clone the entire repository:
+[<img src="https://i.imgur.com/TVI946Z.png" width="250" />](https://youtu.be/VfPa2c9kwhQ)
 
-```sh
-$ cd hexo
-$ git clone https://github.com/theme-next/hexo-theme-next themes/next
-```
+---
 
-Or you can see [detailed installation instructions][docs-installation-url] if you want any other variant.
+### Content Credits :green_heart:
+* [Hero Image](https://images.pexels.com/photos/220444/pexels-photo-220444.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) used as a background image in the very first section of Homepage.
+* [Author Image](https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png) used in the Author Section.
+* [Font Awesome](https://fontawesome.com/)
+* [Poppins Font](https://fonts.google.com/specimen/Poppins)
+* [Memphis Pattern](https://www.freepik.com/free-vector/memphis-pattern-background_4034913.htm#page=1&query=memphis%20pattern&position=23) used for some Social Media Images and the Favicon.
 
-## Plugins
+---
 
-NexT supports a large number of third-party plugins, which can be easily configured.
+### Credits :bulb:
+* [Sneha Omer](http://sassyecoder.github.io/)
+* [Harsh Trivedi](http://harsh98trivedi.github.io/)
 
-For example, if you want to enable `pjax` on your site, just set `pjax` to `true` in NexT config file:
-
-```yml
-# Easily enable fast Ajax navigation on your website.
-# Dependencies: https://github.com/theme-next/theme-next-pjax
-pjax: true
-```
-
-Then visit the «Dependencies» link to get the installation instructions of this module.
-
-### Configure CDN
-
-If you want to specify a CDN link for any plugins, you need to set / update the CDN link.
-
-For example, if you want to use `mediumzoom` and load the plugin via CDN, go to NexT config and see:
-
-```yml
-vendors:
-  # ...
-  # Some contents...
-  # ...
-  mediumzoom: # Set or update mediumzoom CDN URL.
-```
-
-## Update
-
-NexT releases new versions every month. You can update to latest master branch by the following command:
-
-```sh
-$ cd themes/next
-$ git pull
-```
-
-And if you see any error message during update (something like **«Commit your changes or stash them before you can merge»**), recommended to learn [Hexo data files][docs-data-files-url] feature.\
-However, you can bypass update errors by using the `Commit`, `Stash` or `Reset` commands for local changes. See [here](https://stackoverflow.com/a/15745424/5861495) how to do it.
-
-**If you want to update from v5.1.x to the latest version, read [this][docs-update-5-1-x-url].**
-
-## Feedback
-
-* Visit the [Awesome NexT][awesome-next-url] list to share plugins and tutorials with other users.
-* Join our [Telegram][t-chat-url] / [Gitter][gitter-url] / [Riot][riot-url] chats.
-* [Add or improve translation][i18n-url] in few seconds.
-* Report a bug in [GitHub Issues][issues-bug-url].
-* Request a new feature on [GitHub][issues-feat-url].
-* Vote for [popular feature requests][feat-req-vote-url].
-
-## Contributing
-
-We welcome you to join the development of NexT. Please see [contributing document][contributing-document-url]. 🤗
-
-Also, we welcome Issue or PR to our [official-plugins][official-plugins-url].
-
-## Contributors
-
-[![][contributors-image]][contributors-url]
-
-## Thanks
-
-<p align="center">
-  «NexT» send special thanks to these great services that sponsor our core infrastructure:
-<br>
-<br>
-  <a href="https://github.com"><img align="center" width="100" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png"></a>
-  &nbsp;&nbsp;&nbsp;
-  <a href="https://www.netlify.com"><img align="center" width="150" src="https://cdn.netlify.com/15ecf59b59c9d04b88097c6b5d2c7e8a7d1302d0/1b6d6/img/press/logos/full-logo-light.svg"></a>
-<br>
-<br>
-  <sub>GitHub allows us to host the Git repository, Netlify allows us to distribute the documentation.</sub>
-<br>
-<br>
-  <a href="https://crowdin.com"><img align="center" width="180" src="https://support.crowdin.com/assets/logos/crowdin-logo1-small.png"></a>
-<br>
-<br>
-  <sub>Crowdin allows us to translate conveniently the documentation.</sub>
-<br>
-<br>
-  <a href="https://codacy.com"><img align="center" width="155" src="https://user-images.githubusercontent.com/16944225/55026017-623f8f00-5002-11e9-88bf-0d6a5884c6c2.png"></a>
-  &nbsp;&nbsp;&nbsp;
-  <a href="https://travis-ci.com"><img align="center" width="140" src="https://raw.githubusercontent.com/travis-ci/travis-web/master/public/images/logos/TravisCI-Full-Color.png"></a>
-<br>
-<br>
-  <sub>Codacy allows us to monitor code quality, Travis CI allows us to run the test suite.</sub>
-</p>
-
-[docs-installation-url]: https://github.com/theme-next/hexo-theme-next/blob/master/docs/INSTALLATION.md
-[docs-data-files-url]: https://github.com/theme-next/hexo-theme-next/blob/master/docs/DATA-FILES.md
-[docs-update-5-1-x-url]: https://github.com/theme-next/hexo-theme-next/blob/master/docs/UPDATE-FROM-5.1.X.md
-
-[t-news-url]: https://t.me/theme_next_news
-[t-chat-url]: https://t.me/theme_next
-[gitter-url]: https://gitter.im/theme-next
-[riot-url]: https://riot.im/app/#/room/#theme-next:matrix.org
-[i18n-url]: https://i18n.theme-next.org
-
-[awesome-next-url]: https://github.com/theme-next/awesome-next
-[issues-bug-url]: https://github.com/theme-next/hexo-theme-next/issues/new?assignees=&labels=Bug&template=bug-report.md
-[issues-feat-url]: https://github.com/theme-next/hexo-theme-next/issues/new?assignees=&labels=Feature+Request&template=feature-request.md
-[feat-req-vote-url]: https://github.com/theme-next/hexo-theme-next/issues?q=is%3Aopen+is%3Aissue+label%3A%22Feature+Request%22
-
-[contributing-document-url]: https://github.com/theme-next/hexo-theme-next/blob/master/.github/CONTRIBUTING.md
-[official-plugins-url]: https://github.com/theme-next
-[contributors-image]: https://opencollective.com/theme-next/contributors.svg?width=890
-[contributors-url]: https://github.com/theme-next/hexo-theme-next/graphs/contributors
+### License
+The contents of this repository are licensed under the [**GNU General Public License v2.0**](https://github.com/thedevslot/WhatATheme/blob/master/LICENSE)
